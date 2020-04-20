@@ -1,0 +1,30 @@
+﻿@model TPModule5_2.Models.PizzaViewModel
+@using TPModule5_2.Helpers
+
+
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.Partial("_PizzaDisplay")
+
+        <button type="submit" value="submit">creer</button>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
