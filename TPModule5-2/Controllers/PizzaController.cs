@@ -68,7 +68,7 @@ namespace TPModule5_2.Controllers
                     {
                         isValidOrnot = false;
    //renvoi liste et pate dispo
-                        ModelState.AddModelError("IdsIngredients", "veuillez selectionner entre 2 et 5 ingredients");
+                        ModelState.AddModelError("IdPate", "veuillez selectionner une pate");
                     }
                     pizza.Ingredients = FakeDb.Instance.IngredientsDisponible.Where(
                             x => vm.IdsIngredients.Contains(x.Id))
